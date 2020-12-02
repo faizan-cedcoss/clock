@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Clock</title>
+    <style>
+        .body-style {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: grey;
+        }
+        .clock {
+        	position: relative;
+            margin-top: 100px;
+            width: 400px;
+            height: 400px;
+            background-color: #eee;
+            border-radius: 50%;
+            border: 12px solid ;
+            background-image: url('clock.png');
+            background-size: 100% 100%;
+            display: none;
+        }
+        .analog{
+            position: relative;
+            margin-top: 100px;
+            width: 400px;
+            height: 400px;
+            background-color: #eee;
+            border-radius: 50%;
+            border: 12px solid white;
+            background-color: black;
+            color: white;
+            display: none;
+        }
+        .home{
+            position: relative;
+            margin-top: 100px;
+            width: 400px;
+            height: 400px;
+            background-color: #eee;
+            border-radius: 50%;
+            border: 12px solid white;
+            background-color: black;
+            color: white;
+            display: block;
+        }
+        .logo{
+        	width: 80px;
+        	height: 50px;
+        	position: absolute;
+            bottom: 70%;
+            left: 40%;
+        }
+        .div-style2{
+           position: absolute;
+           top: 40%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 50px;
+        }
+        .logo2{
+            width: 80px;
+            height: 50px;
+            position: absolute;
+            bottom: 70%;
+            left: 40%;
+        }
+        .logo3{
+            width: 120px;
+            height: 100px;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .div-2 {            
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 4;
+        }
+        .hand {
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            transform-origin: bottom;
+            border-radius: 50% 50% 0 0;
+        }
+        .hour {
+            width: 8px;
+            height: 25%;
+            background-color: black;
+            z-index: 1;
+        }
+        .minute {
+            width: 5px;
+            height: 34%;
+            background-color: black;
+            z-index: 2;
+        }
+        .second {
+            width: 3px;
+            height: 38%;
+            background-color: grey;
+            z-index: 3;
+        }
+        .p-style{
+            font-size: 30px;
+
+        }
+    </style>
+</head>
+<body class="body-style">
+    <div class="home" id="home" onclick="disp1()">
+            <img src=" apple.png" alt="abc" class="logo3">
+        </div>
+    <div class="clock" id="clock" onclick="disp2()">
+    	<div class="div-2"></div>
+    	<div>
+    		<img src="apple4.png" alt="abc" class="logo">
+    	</div>
+        <div class="hand hour"></div>
+        <div class="hand minute"></div>
+        <div class="hand second"></div>
+    </div>
+    <div class="analog" id="analog" onclick="disp3()">
+        <div class="div-style2">
+            <span id="hours" style="margin-right: 10px"></span>:<span id="minutes" style="margin-left: 10px"></span><br>
+             <p class="p-style">
+                <span id="week"></span>,<span id="day" style="margin-left: 10px"></span>/<span id="month"></span>
+            </p>
+        </div>
+        <div>
+            <img src=" apple.png" alt="abc" class="logo2">
+        </div>
+    </div>
+    <script src="clock.js"></script>
+</body>
+</html>
